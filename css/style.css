@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ############## Utility Classes ############### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary{
+    color: #fff;
+    background: #30bf4b;
+}
+
+.btn-primary:hover{
+    background: #086c1a;
+    transition: background 0.3s ease-in-out;
+    border: 5px 5px 10px #555;
+}
+/* ################# NAVBAR STYLING ################ */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.logo{
+    order: 1;
+    font-size: 3rem;
+    color: #30bf4b;
+}
+
+.navbar a{
+    padding: 16px 15px 5px 15px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    font-size: 2rem;
+}
+
+.navbar a:hover{
+    color: #30bf4b;
+}
+
+
+/* nav{
+    background: #fff;
+    color: #444;
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around;
+    box-shadow: 0px 5px 10px 0px #aaa;
+} */
+
+/* nav .mainMenu{
+    display: flex;
+    list-style: none;
+    margin-right: 5rem;
+}
+
+   .mainMenu li a{
+    display: inline-block;
+    padding: 16px 15px 5px 15px;
+    text-decoration: none;
+    color: #888;
+    font-size: 2rem;
+    font-weight: 500; */
+    /* margin: 3px 10px;
+   }*/
+
+/* nav .mainMenu li a:hover{
+    color: #30bf4b; */
+    /* border-bottom: 2px solid #30bf4b;} */
+
+
+/* nav .openMenu{
+    font-size: 3rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu , .icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook:hover{
+    color: rgb(86, 154, 243);
+}
+
+.fa-instagram:hover{
+    color: rgb(255, 0, 221);
+}
+
+.fa-twitter:hover{
+    color: rgb(86, 154, 243);
+}
+
+.fa-linkedin:hover{
+    color: rgb(0, 110, 255);
+}
+
+nav .logo{
+    margin: 8px;
+    font-size: 2rem;
+    color: #30bf4b;
+    cursor: pointer;
+    margin-left: 5rem;
+} */ 
+
+/* ####################### SHOWCASE STYLING #################### */
+
+.showcase-area{
+    height: 50vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.073)) ,url(../img/showcase2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.main-title{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.showcase-container p{
+    color: #fff;
+    text-align: center;
+}
+
+/* ####################### ABOUT US STYLING 
+####################  */
+#about{
+    padding: 50px 0px;
+    background: #f5f5f9;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about h2{
+    font-size: 3.2rem;
+}
+
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+
+#about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-img{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation-name: about-img-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-text{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(150%);
+    animation-name: about-img-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-150%);
+}
+
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-fit: right;
+}
+
+
+/* ############### SHOP CATEGORY STYLING ################# */
+#shop{
+    padding: 50px 0;
+}
+
+#shop h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #555;
+}
+
+#shop p{
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.category-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-type img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 250px;
+    object-fit: cover;
+    object-fit: center;
+    box-shadow: 5px 5px 10px #555;
+}
+
+/* .img-container{ */
+    /* display: inline-block; */
+/* } */
+
+.shop-type-item{
+    margin-right: 4rem;
+}
+.shop-type-item img{
+    border-radius: 50%;
+}
+
+.shop-type-item .descp{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.descp h3{
+    font-size: 1.6rem;
+}
+
+.category-type1{
+    font-size: 1.3rem;
+}
+
+/* ############### FEATURED PRODUCT STYLING ############ */
+
+#product{
+    padding: 5rem 0 5rem 0;
+    background: rgba(102, 102, 102, 0.134);
+}
+
+.main-hd{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: rgb(57, 57, 57);
+}
+
+.featured-product-hd{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.featured-product{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-type-item{
+    width: 33.33333%;
+}
+
+.featured-product img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.gym-weight-img img:hover{
+    box-shadow: 10px 10px 50px 5px rgb(84, 24, 24);
+}
+
+.headphone-img img:hover{
+    box-shadow: 10px 10px 50px 5px rgb(233, 176, 1);
+}
+
+.perfume-img img:hover{
+    box-shadow: 10px 10px 50px 5px rgb(241, 120, 137);
+}
+
+.product-img{
+    margin: 3rem 2rem;
+}
+
+.star-rating{
+    display: flex;
+    color: orange;
+    font-size: 1.6rem;
+    margin: 0 3rem;
+}
+
+.item-price{
+    margin: 1rem 10rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.product-heading{
+    margin: 0 3rem;
+}
+
+.product-heading h2{
+    font-size: 2rem;
+}
+
+.product-heading p{
+    font-size: 1.6rem;
+}
+
+.reviews{
+    margin: 2rem 3rem;
+    font-size: 1.6rem;
+    color: rgb(176, 176, 176);
+}
+
+/* ################# FOOTER STYLING ################### */
+.footer{
+      background: #000;
+      color: #fff;
+}
+
+.footer p:hover{
+    color: #30bf4b;
+}
+
+.footer li:hover{
+    color: #30bf4b;
+}
+
+.shop-name{
+    color: #30bf4b;
+}
+
+.footer h2{
+    font-size: 3rem;
+    font-weight: 400;
+    /* margin-bottom: 2rem; */
+}
+
+.footer h2:hover{
+    color: #086c1a;
+}
+
+/* .footer p{ */
+    /* font-size: 1.4rem; */
+/* } */
+
+.footer-type li{
+    list-style: none;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.footer-type{
+    display: block;
+    margin: 5rem 5rem 5rem 0;
+    width: 33.333%;
+}
+
+.footer-type i{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+
+/* ################### LONG FOOTER STYLING ############### */
+.long-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconz{
+    display: flex;
+}
+
+.icon{
+    margin-right: 3rem;
+    font-size: 3rem;
+}
+
+.fa-facebook:hover{
+    color: rgb(86, 154, 243);
+}
+
+.fa-instagram:hover{
+    color: rgb(255, 0, 221);
+}
+
+.fa-twitter:hover{
+    color: rgb(86, 154, 243);
+}
+
+.fa-linkedin:hover{
+    color: rgb(0, 110, 255);
+}
+
+.input{
+    margin-bottom: 2rem;
+}
+
+.input input{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+
+.footer2 h2{
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* ################## MEDIA QUERIES ################ */
+@media(max-width:570px){
+    nav .mainMenu{
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease-in;
+        color: #fff;
+    }
+
+    .mainMenu li a{
+        color: #fff;
+    }
+
+    nav .logo{
+        /* margin-top: 1rem; */
+        margin-left: -2rem;
+    }
+
+    nav .mainMenu .closeMenu{
+        font-size: 3rem;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 80px;
+    }
+
+    nav .openMenu{
+        display: block; 
+    }
+
+    nav .mainMenu li a:hover{
+        background: none;
+        color: #30bf4b;
+        font-size: 1.6rem;
+    }
+
+    .icons i{
+        display: inline-block;
+        margin-top: 12px;
+        padding: 12px;
+        color: #fff;
+    }
+
+/* ################ SHOP TYPE ############## */
+   .category-type{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .shop-type-item{
+        margin: 0 0 0 0;
+    }
+
+ .category-type img{
+        /* margin:0 5rem; */
+        /* min-height: none; */
+        width: 250px;
+    }
+
+    .descp{
+        align-items: center;
+    }
+
+    .category-type1{
+        align-items: center;
+        margin:0 auto 3rem auto;
+    }
+
+/* ############### FEATURED PRODUCT ############## */
+.featured-product{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-type-item{
+    width: 100%;
+}
+
+.star-rating{
+    font-size: 2rem;
+}
+
+.fa-star{
+    margin-left: 0.2rem;
+}
+
+/* ################## FOOTER STYLING ################ */
+.footer-content{
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-type{
+    align-items: center;
+    text-align: center;
+}
+
+.iconz{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    margin-top: 25%;
+}
+
+
+}
